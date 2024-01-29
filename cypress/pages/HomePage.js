@@ -1,4 +1,4 @@
-class HomePageLogout {
+class HomePage {
   get burgerMenu() {
     return cy.get('[data-element-type="burger-menu"]');
   }
@@ -10,4 +10,4 @@ class HomePageLogout {
     this.logout.click();
   }
 }
-export default HomePageLogout;
+export default HomePage;

@@ -1,4 +1,4 @@
-class LoginPage {
+class Login {
   get loginButton() {
     return cy.get('button[type="submit"]');
   }
@@ -17,4 +17,4 @@ class LoginPage {
     this.loginButton.click();
   }
 }
-export default LoginPage;
+export default Login;

@@ -1,8 +1,8 @@
-import LoginPage from "../pages/Login";
-import HomePageLogout from "../pages/HomePage";
+import Login from "../pages/Login";
+import HomePage from "../pages/HomePage";
 
-const loginPage = new LoginPage();
-const homePageLogout = new HomePageLogout();
+const login = new Login();
+const homePage = new HomePage();
 
 describe("User can login and logout to GoIT page", () => {
   beforeEach("User can visit to goit page", () => {
@@ -14,8 +14,9 @@ describe("User can login and logout to GoIT page", () => {
       const useremail = user.email;
       const password = user.password;
 
-      loginPage.loginUser(useremail, password);
-      HomePageLogout;
+      login.loginUser(useremail, password);
+      cy.wait(1000);
+      homePage.logoutUser();
     });
   });
 
@@ -25,7 +26,8 @@ describe("User can login and logout to GoIT page", () => {
       const password = user.password;
 
       cy.loginUser(useremail, password);
-      HomePageLogout;
+      cy.wait(1000);
+      homePage.logoutUser();
     });
   });
 });
